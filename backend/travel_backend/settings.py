@@ -66,14 +66,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'travel_backend.wsgi.application'
 
-# Database Configuration - PostgreSQL
+# Database Configuration - PostgreSQL (AWS RDS)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'travel',
         'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'PASSWORD': 'TravelDB2025!',
+        'HOST': 'travel.cgpf62rur.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
