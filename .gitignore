@@ -1,0 +1,75 @@
+# API Keys and Secrets (CRITICAL - MUST BE IGNORED)
+API/
+*.txt
+
+# Database files (CRITICAL - MUST BE IGNORED)
+db/
+*.sql
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+
+# Environment files
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# IDEs
+.idea/
+*.iml
+
+# Pytest / Coverage
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Certificates/private keys
+*.pem
+*.key
+
+# Misc
+*.pyc
+*.pyo
+*.pyd
