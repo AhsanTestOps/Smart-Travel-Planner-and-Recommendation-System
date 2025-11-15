@@ -73,7 +73,7 @@ DATABASES = {
         'NAME': 'travel',
         'USER': 'postgres',
         'PASSWORD': 'TravelDB2025!',
-        'HOST': 'travel.cgpf62rur.us-east-1.rds.amazonaws.com',
+        'HOST': 'travel.cep6o2i8krur.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
