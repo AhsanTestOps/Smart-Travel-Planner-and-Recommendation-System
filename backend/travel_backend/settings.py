@@ -17,6 +17,10 @@ SECRET_KEY = 'django-insecure-!uy7fm(q8ef*ncq0pur&cn$1!+v02ehk4!hkp*y3ajx^m_y+03
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver', '3.238.239.67', 'ec2-3-238-239-67.compute-1.amazonaws.com']
 
+# Add Amplify domain to CORS
+CORS_ALLOWED_ORIGINS += ['https://staging.d3bplit6vxoyyk.amplifyapp.com']
+CSRF_TRUSTED_ORIGINS += ['https://staging.d3bplit6vxoyyk.amplifyapp.com']
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
