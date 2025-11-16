@@ -17,10 +17,6 @@ SECRET_KEY = 'django-insecure-!uy7fm(q8ef*ncq0pur&cn$1!+v02ehk4!hkp*y3ajx^m_y+03
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver', '3.238.239.67', 'ec2-3-238-239-67.compute-1.amazonaws.com']
 
-# Add Amplify domain to CORS
-CORS_ALLOWED_ORIGINS += ['https://staging.d3bplit6vxoyyk.amplifyapp.com']
-CSRF_TRUSTED_ORIGINS += ['https://staging.d3bplit6vxoyyk.amplifyapp.com']
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -118,6 +114,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5177",
     "http://localhost:5178",
     "http://127.0.0.1:5178",
+    "https://staging.d3bplit6vxoyyk.amplifyapp.com",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
@@ -155,6 +152,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5176",
     "http://127.0.0.1:5177",
     "http://127.0.0.1:5178",
+    "https://staging.d3bplit6vxoyyk.amplifyapp.com",
 ]
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
