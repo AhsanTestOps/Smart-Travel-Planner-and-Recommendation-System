@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import ProtectedRoute from './components/ProtectedRoute';
-import ConnectionStatus from './components/ConnectionStatus';
 import Home from './pages/Home';
 import TripPlanForm from './pages/TripPlanForm';
 import MapDisplay from './pages/MapDisplay_enhanced';
@@ -81,7 +80,6 @@ function AppContent() {
           } />
         </Routes>
       </main>
-      <ConnectionStatus />
     </div>
   );
 }
