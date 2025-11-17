@@ -114,8 +114,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5177",
     "http://localhost:5178",
     "http://127.0.0.1:5178",
+    "http://3.238.239.67:8000",
     "https://staging.d3bplit6vxoyyk.amplifyapp.com",
     "https://main.d23l4rx4te8hl4.amplifyapp.com",
+    "https://d23l4rx4te8hl4.amplifyapp.com",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
@@ -153,8 +155,10 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5176",
     "http://127.0.0.1:5177",
     "http://127.0.0.1:5178",
+    "http://3.238.239.67:8000",
     "https://staging.d3bplit6vxoyyk.amplifyapp.com",
     "https://main.d23l4rx4te8hl4.amplifyapp.com",
+    "https://d23l4rx4te8hl4.amplifyapp.com",
 ]
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
