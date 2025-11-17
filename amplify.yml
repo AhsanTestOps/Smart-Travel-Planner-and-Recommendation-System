@@ -5,7 +5,7 @@ frontend:
       commands:
         - cd frontend
         - npm install
-        - echo "V ITE_API_BASE_URL=http://3.238.239.67:8000/api" > .env.production
+        - echo "VITE_API_BASE_URL=http://3.238.239.67:8000/api" > .env.production
         - echo "VITE_BACKEND_URL=http://3.238.239.67:8000" >> .env.production
         - cat .env.production
     build:
