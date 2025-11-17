@@ -4,12 +4,13 @@ frontend:
     preBuild:
       commands:
         - cd frontend
-        - npm install
+        - npm ci
         - echo "VITE_API_BASE_URL=http://3.238.239.67:8000/api" > .env.production
         - echo "VITE_BACKEND_URL=http://3.238.239.67:8000" >> .env.production
         - cat .env.production
     build:
       commands:
+        - cd frontend
         - npm run build
   artifacts:
     baseDirectory: frontend/dist
