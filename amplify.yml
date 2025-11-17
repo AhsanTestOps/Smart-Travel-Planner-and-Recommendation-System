@@ -10,7 +10,6 @@ frontend:
         - cat .env.production
     build:
       commands:
-        - cd frontend
         - npm run build
   artifacts:
     baseDirectory: frontend/dist
