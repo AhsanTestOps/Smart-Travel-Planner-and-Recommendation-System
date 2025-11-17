@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import config from '../utils/api';
 import { 
   MapPin, Search, Filter, Star, DollarSign, Utensils, 
   Building, Camera, Clock, Globe, ChevronDown, X 
@@ -20,7 +21,7 @@ const DestinationsPage = () => {
   const [minRating, setMinRating] = useState(0);
   const [showFilters, setShowFilters] = useState(false);
 
-  const API_BASE = 'http://127.0.0.1:8000/api/destinations';
+  const API_BASE = `${config.API_BASE_URL}/destinations`;
 
   // Fetch initial data
   useEffect(() => {

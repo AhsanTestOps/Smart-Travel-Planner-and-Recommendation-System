@@ -1,6 +1,10 @@
 // API Configuration and Helper Functions
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api';
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000';
+// Use build-time environment variables when provided by Amplify.
+// Fallback to the EC2 backend (development/staging). Note: when serving the
+// frontend over HTTPS, the backend must also be served over HTTPS to avoid
+// mixed-content blocking in browsers.
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://3.238.239.67:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || `${BACKEND_URL}/api`;
 
 // API Configuration
 export const config = {
@@ -23,6 +27,7 @@ export const config = {
     freeTrips: `${API_BASE_URL}/free-trips/`,
     freeTripCreate: `${API_BASE_URL}/free-trips/create/`,
     freeTripDetail: (id) => `${API_BASE_URL}/free-trips/${id}/`,
+    freeTripSession: (sessionId) => `${API_BASE_URL}/free-trips/session/${sessionId}/`,
     
     // AI Travel Features
     aiTravelGenerate: `${API_BASE_URL}/ai-travel/generate/`,

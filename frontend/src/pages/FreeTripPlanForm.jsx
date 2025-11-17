@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { apiService } from '../utils/api';
 
 const FreeTripPlanForm = ({ onTripSaved }) => {
   const navigate = useNavigate();
@@ -51,15 +52,7 @@ const FreeTripPlanForm = ({ onTripSaved }) => {
 
       console.log('Submitting free trip data:', submitData);
 
-      const response = await fetch('http://127.0.0.1:8000/api/free-trips/create/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submitData),
-      });
-
-      const data = await response.json();
+      const data = await apiService.freeTrips.create(submitData);
       console.log('Free trip response:', data);
 
       if (data.success) {

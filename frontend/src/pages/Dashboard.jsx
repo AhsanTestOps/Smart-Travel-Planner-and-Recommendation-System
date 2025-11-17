@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useTripContext } from '../context/TripContext';
 import { makeApiCall } from '../utils/csrf';
+import config from '../utils/api';
 import { 
   MapPin, Calendar, Users, DollarSign, Plus, Clock, Target, X, TrendingUp, 
   Globe, Star, BarChart3, Activity, PieChart, ArrowUpRight, Sparkles,
@@ -550,7 +551,7 @@ const TripPlanningModal = ({ onClose, onTripCreated }) => {
     setError('');
 
     try {
-      const response = await makeApiCall('http://127.0.0.1:8000/api/trips/create/', {
+      const response = await makeApiCall(config.endpoints.tripCreate, {
         method: 'POST',
         body: JSON.stringify(formData),
       });

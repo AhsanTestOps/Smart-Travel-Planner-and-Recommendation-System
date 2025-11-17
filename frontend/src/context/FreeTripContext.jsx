@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { apiService } from '../utils/api';
+import config, { apiService } from '../utils/api';
 
 const FreeTripContext = createContext();
 
@@ -39,13 +39,12 @@ export const FreeTripProvider = ({ children }) => {
     
     setLoading(true);
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/free-trips/session/${sessionId}/`, {
+      const response = await fetch(config.endpoints.freeTripSession(sessionId), {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      
       const data = await response.json();
       if (data.success) {
         setSessionTrips(data.trips);
