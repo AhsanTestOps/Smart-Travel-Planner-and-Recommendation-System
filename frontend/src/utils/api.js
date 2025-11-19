@@ -1,6 +1,6 @@
 // API Configuration and Helper Functions
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api';
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://3.238.239.67:8000/api';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://3.238.239.67:8000';
 
 // API Configuration
 export const config = {
