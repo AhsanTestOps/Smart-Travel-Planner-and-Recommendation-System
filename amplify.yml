@@ -5,9 +5,10 @@ frontend:
       commands:
         - cd frontend
         - npm ci
-        # Create .env.production with EC2 backend URLs
-        - echo "VITE_API_BASE_URL=http://3.238.239.67:8000/api" > .env.production
-        - echo "VITE_BACKEND_URL=http://3.238.239.67:8000" >> .env.production
+        # TEMPORARY: Use same-origin API calls (Amplify will proxy to backend)
+        # This avoids HTTPS/HTTP mixed content errors
+        - echo "VITE_API_BASE_URL=/api" > .env.production
+        - echo "VITE_BACKEND_URL=" >> .env.production
     build:
       commands:
         - npm run build
