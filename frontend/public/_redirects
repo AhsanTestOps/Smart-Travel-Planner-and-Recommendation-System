@@ -1,6 +1,2 @@
-# Proxy API calls to EC2 backend
-/api/* http://3.238.239.67:8000/api/:splat 200
-/admin/* http://3.238.239.67:8000/admin/:splat 200
-
-# SPA routing - serve index.html for all other routes
+# SPA routing - serve index.html for all routes
 /*    /index.html   200
