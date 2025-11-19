@@ -1,15 +1,13 @@
 // CSRF token management for Django API calls
-import config from './api';
-
 let csrfToken = null;
 
 export const getCsrfToken = async () => {
   if (csrfToken) {
     return csrfToken;
   }
-
+  
   try {
-    const response = await fetch(config.endpoints.csrf, {
+    const response = await fetch('http://127.0.0.1:8000/api/csrf/', {
       method: 'GET',
       credentials: 'include',
     });
