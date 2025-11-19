@@ -5,9 +5,9 @@ frontend:
       commands:
         - cd frontend
         - npm ci
-        # Use EC2 backend directly - we'll configure HTTPS later
-        - echo "VITE_API_BASE_URL=http://3.238.239.67:8000/api" > .env.production
-        - echo "VITE_BACKEND_URL=http://3.238.239.67:8000" >> .env.production
+        # Using HTTPS with nginx reverse proxy
+        - echo "VITE_API_BASE_URL=https://3.238.239.67/api" > .env.production
+        - echo "VITE_BACKEND_URL=https://3.238.239.67" >> .env.production
     build:
       commands:
         - npm run build
@@ -18,3 +18,4 @@ frontend:
   cache:
     paths:
       - frontend/node_modules/**/*
+
