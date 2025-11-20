@@ -17,14 +17,13 @@ SECRET_KEY = 'django-insecure-!uy7fm(q8ef*ncq0pur&cn$1!+v02ehk4!hkp*y3ajx^m_y+03
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver', '3.238.239.67', 'ec2-3-238-239-67.compute-1.amazonaws.com', 'api.smarttravelplanner.app']
 
-# HTTPS Settings (will be enabled after SSL setup)
+# HTTPS Settings (enabled after SSL setup)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# Uncomment these after SSL is working:
-# SECURE_SSL_REDIRECT = True
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-# SECURE_HSTS_SECONDS = 31536000
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 # Application definition
 INSTALLED_APPS = [
@@ -150,7 +149,6 @@ REST_FRAMEWORK = {
 # Session Settings
 SESSION_COOKIE_HTTPONLY = False
 SESSION_COOKIE_SAMESITE = None
-SESSION_COOKIE_SECURE = False
 SESSION_SAVE_EVERY_REQUEST = True
 
 # CSRF Settings for API
@@ -175,7 +173,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://main.do9yd8wvfngvt.amplifyapp.com",
     "https://do9yd8wvfngvt.amplifyapp.com",
 ]
-CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = None
 
