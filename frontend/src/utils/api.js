@@ -1,7 +1,7 @@
 // API Configuration and Helper Functions
-// Use relative /api path for Amplify proxy, fallback to EC2 for local development
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (window.location.hostname.includes('amplifyapp.com') ? '/api' : 'http://3.238.239.67:8000/api');
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || (window.location.hostname.includes('amplifyapp.com') ? '' : 'http://3.238.239.67:8000');
+// Use HTTPS domain for all environments
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.smarttravelplanner.app/api';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://api.smarttravelplanner.app';
 
 // API Configuration
 export const config = {
