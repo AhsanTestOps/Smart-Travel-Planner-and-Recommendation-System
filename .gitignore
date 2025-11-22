@@ -1,10 +1,16 @@
 # API Keys and Secrets (CRITICAL - MUST BE IGNORED)
 API/
-*.txt
+**/deepseek*.txt
+**/api*.txt
 
 # Database files (CRITICAL - MUST BE IGNORED)
 db/
 *.sql
+travel.sql
+
+# Sensitive Configuration
+backend/travel_backend/settings.py
+**/settings.py
 
 # Python
 __pycache__/
